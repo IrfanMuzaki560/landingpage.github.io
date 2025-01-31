@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Our Fresh Products</title>
+    <style>
+      /* Global Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background-color: #f4f4f4;
+      }
+
+      .container {
+        width: 90%;
+        margin: 0 auto;
+      }
+
+      /* Navbar Styles */
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+      }
+
+      .nav__logo img {
+        width: 150px;
+      }
+
+      .nav__links {
+        list-style-type: none;
+        display: flex;
+        gap: 20px;
+      }
+
+      .nav__links li {
+        font-size: 16px;
+      }
+
+      .nav__links li a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .search {
+        display: flex;
+        align-items: center;
+        border: 1px solid #fff;
+        padding: 5px 10px;
+        border-radius: 20px;
+      }
+
+      .search input {
+        border: none;
+        padding: 5px;
+        background: transparent;
+        color: #fff;
+        outline: none;
+      }
+
+      .search span i {
+        color: #fff;
+      }
+
+      /* Products Section */
+      .products__container {
+        text-align: center;
+        margin-top: 50px;
+      }
+      h1, p {
+    color: white;
+}
+
+
+      .products__container h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+
+      .products__container p {
+        font-size: 18px;
+        color: #555;
+        margin-bottom: 40px;
+      }
+      /* Products Section */
+      .products__grid {
+        display: grid;
+        grid-template-columns: repeat(
+          auto-fill,
+          minmax(200px, 1fr)
+        ); /* Menurunkan ukuran minimum kolom */
+        gap: 20px; /* Menurunkan jarak antar produk */
+        justify-items: center;
+      }
+
+      .product__card {
+        background-color: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 250px; /* Menurunkan ukuran maksimal produk */
+        transition: transform 0.3s ease;
+      }
+
+      .product__card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .card__content {
+        padding: 20px;
+        text-align: left;
+      }
+
+      .card__content h4 {
+        font-size: 22px;
+        color: #333;
+        margin-bottom: 15px;
+      }
+
+      .card__content p {
+        font-size: 16px;
+        color: #777;
+        margin-bottom: 20px;
+      }
+
+      .btn {
+        background-color: #008000;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: #006400;
+      }
+
+      .product__card:hover {
+        transform: translateY(-10px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+       <nav>
+        <div class="nav__logo">
+          <img src="assets/logo.png" alt="logo" />
+        </div>
+        <ul class="nav__links">
+          <li class="link"><a href="index.html">Home</a></li>
+          <li class="link"><a href="products.html">Products</a></li>
+          <li class="link"><a href="#">Contact Us</a></li>
+          <li class="link"><a href="#">Blog</a></li>
+        </ul>
+        <div class="search">
+          <input type="text" placeholder="Search" />
+          <span><i class="ri-search-line"></i></span>
+        </div>
+        <div class="login">
+          <span><i class="ri-user-3-fill"></i></span>
+          Log In
+        </div>
+      </nav>
+
+
+     <div class="products__container">
+    <h1>Our Fresh & Healthy Products</h1>
+    <p>
+        Temukan sayuran segar dan berkualitas langsung dari petani, siap untuk
+        memenuhi kebutuhan makanan sehat Anda. Kami menyediakan berbagai
+        pilihan produk dengan pengiriman cepat dan mudah.
+    </p>
+
+    <!-- Katalog Produk -->
+    <div class="products__grid">
+        <!-- Product 1 -->
+       <div class="product__card">
+    <img src="assets/tomat.jpg" alt="Tomat Segar" />
+    <div class="card__content">
+        <h4>Tomat Segar</h4>
+        <p>
+            Tomat berkualitas tinggi, segar, dan manis, cocok untuk masakan sehat.
+        </p>
+        <p><strong>Rp 25.000</strong></p>
+        <a href="order.html" class="btn">Order Now</a>
+    </div>
+</div>
+
+<div class="product__card">
+    <img src="assets/pepaya.jpg" alt="Pepaya Segar" />
+    <div class="card__content">
+        <h4>Pepaya Segar</h4>
+        <p>
+            Pepaya manis dan kaya vitamin, nikmati langsung atau sebagai jus.
+        </p>
+        <p><strong>Rp 30.000</strong></p>
+        <a href="order.html" class="btn">Order Now</a>
+    </div>
+</div>
+
+<div class="product__card">
+    <img src="assets/mentimun.jpg" alt="Mentimun Segar" />
+    <div class="card__content">
+        <h4>Mentimun Segar</h4>
+        <p>
+            Mentimun segar, kaya air dan serat, cocok untuk salad atau jus.
+        </p>
+        <p><strong>Rp 20.000</strong></p>
+        <a href="order.html" class="btn">Order Now</a>
+    </div>
+</div>
+
+<div class="product__card">
+    <img src="assets/sawi.jpg" alt="Sawi Segar" />
+    <div class="card__content">
+        <h4>Sawi Hijau Segar</h4>
+        <p>
+            Sawi hijau kaya vitamin, cocok untuk salad atau tumisan sehat.
+        </p>
+        <p><strong>Rp 18.000</strong></p>
+        <a href="order.html" class="btn">Order Now</a>
+    </div>
+</div>
+
+<div class="product__card">
+    <img src="assets/brokoli.jpg" alt="Brokoli Segar" />
+    <div class="card__content">
+        <h4>Brokoli Segar</h4>
+        <p>
+            Brokoli kaya vitamin C, bantu tingkatkan daya tahan tubuh.
+        </p>
+        <p><strong>Rp 35.000</strong></p>
+        <a href="order.html" class="btn">Order Now</a>
+    </div>
+</div>
+
+<div class="product__card">
+    <img src="assets/kangkung.jpg" alt="Kangkung Segar" />
+    <div class="card__content">
+        <h4>Kangkung Segar</h4>
+        <p>
+            Kangkung kaya zat besi, nikmati dengan tumis atau sup sehat.
+        </p>
+        <p><strong>Rp 15.000</strong></p>
+        <a href="order.html" class="btn">Order Now</a>
+    </div>
+</div>
+
+           
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
