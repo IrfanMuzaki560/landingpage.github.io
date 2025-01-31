@@ -20,10 +20,15 @@
 
       body {
         background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
       }
 
       .container {
         width: 90%;
+        max-width: 600px;
         margin: 0 auto;
       }
 
@@ -54,37 +59,32 @@
         text-decoration: none;
       }
 
-      /* Checkout Section */
-      .checkout__container {
+      /* Checkout Card */
+      .checkout-card {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         margin-top: 50px;
       }
 
-      .checkout__container h1 {
-        font-size: 36px;
-        margin-bottom: 20px;
-        text-align: center;
-        color: #333;
-      }
-
-      /* Cart Summary */
-      .cart-summary {
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        margin-bottom: 30px;
-      }
-
-      .cart-summary h2 {
+      .checkout-card h1 {
         font-size: 24px;
         margin-bottom: 20px;
+        color: #333;
+        text-align: center;
+      }
+
+      .checkout-card h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
         color: #333;
       }
 
       .cart-item {
         display: flex;
         justify-content: space-between;
-        padding: 10px;
+        padding: 10px 0;
         border-bottom: 1px solid #ddd;
       }
 
@@ -103,17 +103,13 @@
 
       .address-info,
       .delivery-info {
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        margin-bottom: 30px;
+        margin-top: 20px;
       }
 
       .address-info h3,
       .delivery-info h3 {
-        font-size: 20px;
-        margin-bottom: 15px;
+        font-size: 18px;
+        margin-bottom: 10px;
         color: #333;
       }
 
@@ -121,28 +117,31 @@
       .delivery-info p {
         font-size: 16px;
         color: #555;
+        margin-bottom: 5px;
       }
 
       .total-cost {
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        margin-bottom: 30px;
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid #ddd;
         display: flex;
         justify-content: space-between;
       }
 
       .total-cost p {
-        font-size: 20px;
-        font-weight: bold;
+        font-size: 16px;
         color: #333;
       }
 
       .total-cost span {
-        font-size: 20px;
+        font-size: 16px;
         font-weight: bold;
         color: #333;
+      }
+
+      .total-cost .total {
+        font-size: 18px;
+        color: #008000;
       }
 
       button {
@@ -155,6 +154,7 @@
         transition: background-color 0.3s ease;
         width: 100%;
         font-size: 18px;
+        margin-top: 20px;
       }
 
       button:hover {
@@ -175,7 +175,8 @@
         </ul>
       </nav>
 
-      <div class="checkout__container">
+      <!-- Checkout Card -->
+      <div class="checkout-card">
         <h1>Checkout</h1>
 
         <!-- Cart Summary -->
@@ -216,7 +217,7 @@
           <div>
             <span>Rp 80.000</span>
             <span>Rp 15.000</span>
-            <span><strong>Rp 95.000</strong></span>
+            <span class="total">Rp 95.000</span>
           </div>
         </div>
 
