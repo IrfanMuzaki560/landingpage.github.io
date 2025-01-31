@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Checkout</title>
+    <style>
+      /* Global Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background-color: #f4f4f4;
+      }
+
+      .container {
+        width: 90%;
+        margin: 0 auto;
+      }
+
+      /* Navbar Styles */
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+      }
+
+      .nav__logo img {
+        width: 150px;
+      }
+
+      .nav__links {
+        list-style-type: none;
+        display: flex;
+        gap: 20px;
+      }
+
+      .nav__links li {
+        font-size: 16px;
+      }
+
+      .nav__links li a {
+        color: #000;
+        text-decoration: none;
+      }
+
+      /* Checkout Section */
+      .checkout__container {
+        margin-top: 50px;
+      }
+
+      .checkout__container h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        text-align: center;
+        color: #333;
+      }
+
+      /* Cart Summary */
+      .cart-summary {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+      }
+
+      .cart-summary h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      .cart-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .cart-item:last-child {
+        border-bottom: none;
+      }
+
+      .cart-item p {
+        font-size: 16px;
+        color: #333;
+      }
+
+      .cart-item strong {
+        font-weight: bold;
+      }
+
+      .address-info,
+      .delivery-info {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+      }
+
+      .address-info h3,
+      .delivery-info h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+        color: #333;
+      }
+
+      .address-info p,
+      .delivery-info p {
+        font-size: 16px;
+        color: #555;
+      }
+
+      .total-cost {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .total-cost p {
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .total-cost span {
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      button {
+        background-color: #008000;
+        color: #fff;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: 100%;
+        font-size: 18px;
+      }
+
+      button:hover {
+        background-color: #006400;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="nav__logo">
+          <img src="assets/logo.png" alt="logo" />
+        </div>
+        <ul class="nav__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="checkout__container">
+        <h1>Checkout</h1>
+
+        <!-- Cart Summary -->
+        <div class="cart-summary">
+          <h2>Cart Summary</h2>
+          <div class="cart-item">
+            <p>Tomat Segar (2)</p>
+            <strong>Rp 50.000</strong>
+          </div>
+          <div class="cart-item">
+            <p>Pepaya Segar (1)</p>
+            <strong>Rp 30.000</strong>
+          </div>
+        </div>
+
+        <!-- Address Information -->
+        <div class="address-info">
+          <h3>Shipping Address</h3>
+          <p>Jalan Raya No. 123, Jakarta Selatan</p>
+          <p>Phone: 08123456789</p>
+        </div>
+
+        <!-- Delivery Info -->
+        <div class="delivery-info">
+          <h3>Delivery Information</h3>
+          <p>Courier: JNE</p>
+          <p>Estimated Delivery: 2-3 days</p>
+          <p>Shipping Fee: Rp 15.000</p>
+        </div>
+
+        <!-- Total Cost -->
+        <div class="total-cost">
+          <div>
+            <p>Total Products</p>
+            <p>Shipping Fee</p>
+            <p><strong>Total</strong></p>
+          </div>
+          <div>
+            <span>Rp 80.000</span>
+            <span>Rp 15.000</span>
+            <span><strong>Rp 95.000</strong></span>
+          </div>
+        </div>
+
+        <!-- Confirm Button -->
+        <button type="button">Confirm Order</button>
+      </div>
+    </div>
+  </body>
+</html>

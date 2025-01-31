@@ -21,6 +21,22 @@
           <li class="link"><a href="products.html">Products</a></li>
           <li class="link"><a href="#">Contact Us</a></li>
           <li class="link"><a href="#">Blog</a></li>
+          <!-- Dropdown untuk layar kecil -->
+          <li class="link dropdown">
+            <a
+              href="#"
+              class="dropdown-toggle"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              More
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">About Us</a></li>
+              <li><a class="dropdown-item" href="#">Terms & Conditions</a></li>
+              <li><a class="dropdown-item" href="#">Privacy Policy</a></li>
+            </ul>
+          </li>
         </ul>
         <div class="search">
           <input type="text" placeholder="Search" />
@@ -35,10 +51,33 @@
         <img class="bg__img__1" src="assets/bg-dots.png" alt="bg" />
         <img class="bg__img__2" src="assets/bg-arrow.png" alt="bg" />
         <div class="socials">
-          <span><i class="ri-twitter-fill"></i></span>
-          <span><i class="ri-facebook-fill"></i></span>
-          <span><i class="ri-instagram-line"></i></span>
-          <span><i class="ri-youtube-fill"></i></span>
+          <span>
+            <a
+              href="https://www.instagram.com/fann_0163?utm_source=qr&igsh=MTAydWZ3eWNudGh6NA=="
+              target="_blank"
+              style="text-decoration: none"
+            >
+              <i class="ri-instagram-line" style="color: white"></i>
+            </a>
+          </span>
+          <span>
+            <a
+              href="https://wa.me/082325246802"
+              target="_blank"
+              style="text-decoration: none"
+            >
+              <i class="ri-whatsapp-line" style="color: white"></i>
+            </a>
+          </span>
+          <span>
+            <a
+              href="https://www.tiktok.com/@fann_0163?_t=ZS-8tWg0uHOQDs&_r=1"
+              target="_blank"
+              style="text-decoration: none"
+            >
+              <i class="ri-tiktok-fill" style="color: white"></i>
+            </a>
+          </span>
         </div>
         <div class="content">
           <h1>
@@ -51,8 +90,9 @@
             Kami menghadirkan bahan makanan berkualitas tinggi, sehat, dan segar
             dengan pengiriman cepat dan mudah.
           </p>
-
-          <button class="btn">ORDER SEKARANG</button>
+          <button class="btn" onclick="window.location.href='order.html';">
+            ORDER SEKARANG
+          </button>
         </div>
         <div class="destination__grid">
           <div class="destination__card">

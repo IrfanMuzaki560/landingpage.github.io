@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Order Page</title>
+    <style>
+      /* Global Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background-color: #f4f4f4;
+      }
+
+      .container {
+        width: 90%;
+        margin: 0 auto;
+      }
+
+      /* Navbar Styles */
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+      }
+
+      .nav__logo img {
+        width: 150px;
+      }
+
+      .nav__links {
+        list-style-type: none;
+        display: flex;
+        gap: 20px;
+      }
+
+      .nav__links li {
+        font-size: 16px;
+      }
+
+      .nav__links li a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .search {
+        display: flex;
+        align-items: center;
+        border: 1px solid #fff;
+        padding: 5px 10px;
+        border-radius: 20px;
+      }
+
+      .search input {
+        border: none;
+        padding: 5px;
+        background: transparent;
+        color: #fff;
+        outline: none;
+      }
+
+      .search span i {
+        color: #fff;
+      }
+
+      /* Order Section */
+      .order__container {
+        margin-top: 50px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .order__container h1 {
+        text-align: center;
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      .order__details {
+        margin-bottom: 30px;
+      }
+
+      .order__details p {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      .order__details p strong {
+        font-size: 20px;
+        color: #008000;
+      }
+
+      .order__form label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 16px;
+      }
+
+      .order__form input,
+      .order__form select,
+      .order__form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      .btn {
+        background-color: #008000;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: #006400;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="nav__logo">
+          <img src="assets/logo.png" alt="logo" />
+        </div>
+        <ul class="nav__links">
+          <li class="link"><a href="index.html">Home</a></li>
+          <li class="link"><a href="products.html">Products</a></li>
+          <li class="link"><a href="#">Contact Us</a></li>
+          <li class="link"><a href="#">Blog</a></li>
+        </ul>
+      </nav>
+
+      <div class="order__container">
+        <h1>Order Details</h1>
+        <div class="order__details">
+          <p><strong>Product Name:</strong> Tomat Segar</p>
+          <p><strong>Price:</strong> Rp 25.000</p>
+          <p><strong>Quantity:</strong> 1</p>
+          <p><strong>Total:</strong> Rp 25.000</p>
+        </div>
+
+        <div class="order__form">
+          <label for="name">Full Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Enter your full name"
+          />
+
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="Enter your email address"
+          />
+
+          <label for="address">Shipping Address:</label>
+          <textarea
+            id="address"
+            name="address"
+            rows="4"
+            required
+            placeholder="Enter your address"
+          ></textarea>
+
+          <label for="payment">Payment Method:</label>
+          <select id="payment" name="payment" required>
+            <option value="credit_card">Credit Card</option>
+            <option value="bank_transfer">Bank Transfer</option>
+            <option value="cash_on_delivery">Cash on Delivery</option>
+          </select>
+
+          <form action="cart.html" method="get">
+            <button type="submit" class="btn">Confirm Order</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

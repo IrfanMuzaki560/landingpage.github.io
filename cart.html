@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Shopping Cart</title>
+    <style>
+      /* Global Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background-color: #f4f4f4;
+      }
+
+      .container {
+        width: 90%;
+        margin: 0 auto;
+      }
+
+      /* Navbar Styles */
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+      }
+
+      .nav__logo img {
+        width: 150px;
+      }
+
+      .nav__links {
+        list-style-type: none;
+        display: flex;
+        gap: 20px;
+      }
+
+      .nav__links li {
+        font-size: 16px;
+      }
+
+      .nav__links li a {
+        color: #000;
+        text-decoration: none;
+      }
+
+      /* Cart Section */
+      .cart__container {
+        margin-top: 50px;
+      }
+
+      .cart__container h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        text-align: center;
+        color: #333;
+      }
+
+      .cart__items {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 30px;
+      }
+
+      .cart__item {
+        display: flex;
+        justify-content: space-between;
+        background-color: #fff;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .cart__item img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+
+      .cart__item-info {
+        flex: 1;
+        margin-left: 20px;
+      }
+
+      .cart__item-info h4 {
+        font-size: 18px;
+        color: #333;
+      }
+
+      .cart__item-info p {
+        font-size: 16px;
+        color: #777;
+        margin-top: 5px;
+      }
+
+      .cart__item-info p strong {
+        color: #000;
+      }
+
+      .cart__item-actions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .cart__item-actions button {
+        background-color: #ff0000;
+        color: #fff;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .cart__item-actions button:hover {
+        background-color: #d50000;
+      }
+
+      .total {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        font-size: 18px;
+        color: #333;
+      }
+
+      .total p {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .checkout-btn {
+        display: flex;
+        justify-content: center;
+      }
+
+      .checkout-btn a {
+        text-decoration: none;
+      }
+
+      .btn {
+        background-color: #008000;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: #006400;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="nav__logo">
+          <img src="assets/logo.png" alt="logo" />
+        </div>
+        <ul class="nav__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="cart__container">
+        <h1>Your Shopping Cart</h1>
+
+        <!-- Cart Items -->
+        <div class="cart__items">
+          <!-- Cart Item 1 -->
+          <div class="cart__item">
+            <img src="assets/tomat.jpg" alt="Tomat Segar" />
+            <div class="cart__item-info">
+              <h4>Tomat Segar</h4>
+              <p>Fresh and sweet tomatoes, perfect for healthy meals.</p>
+              <p><strong>Rp 25.000</strong></p>
+            </div>
+            <div class="cart__item-actions">
+              <button>Remove</button>
+            </div>
+          </div>
+
+          <!-- Cart Item 2 -->
+          <div class="cart__item">
+            <img src="assets/pepaya.jpg" alt="Pepaya Segar" />
+            <div class="cart__item-info">
+              <h4>Pepaya Segar</h4>
+              <p>Sweet and vitamin-rich papayas, perfect for juices.</p>
+              <p><strong>Rp 30.000</strong></p>
+            </div>
+            <div class="cart__item-actions">
+              <button>Remove</button>
+            </div>
+          </div>
+
+          <!-- Cart Item 3 -->
+          <div class="cart__item">
+            <img src="assets/mentimun.jpg" alt="Mentimun Segar" />
+            <div class="cart__item-info">
+              <h4>Mentimun Segar</h4>
+              <p>Fresh and hydrating cucumbers, ideal for salads.</p>
+              <p><strong>Rp 20.000</strong></p>
+            </div>
+            <div class="cart__item-actions">
+              <button>Remove</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Total -->
+        <div class="total">
+          <p>Total</p>
+          <p>Rp 75.000</p>
+        </div>
+
+        <!-- Checkout Button -->
+        <div class="checkout-btn">
+          <a href="checkout.html">
+            <button class="btn">Proceed to Checkout</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
